@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -46,7 +47,61 @@ namespace confinement_management
 
         private void label3_Click(object sender, EventArgs e)
         {
+            string usuario = textBox1.Text;
+            string senha = textBox2.Text;
 
+            namespace CadastroCliente
+    {
+        public partial class LoginForm : Form
+        {
+            public LoginForm()
+            {
+                InitializeComponent();
+            }
+
+            private void btnLogin_Click(object sender, EventArgs e)
+            {
+                string connectionString = "Server=localhost;Database=SEU_BANCO;User Id=aluno;Password=aluno;";
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+
+                        string query = @"SELECT id_usuario, nome 
+                                     FROM cadu
+                                     WHERE email = @usuario AND senha = @senha";
+
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@usuario", usuario.Text);
+                        cmd.Parameters.AddWithValue("@senha", senha.Text);
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read()) // encontrou usuário
+                        {
+                            string nome = reader["nome"].ToString();
+                            MessageBox.Show($"Bem-vindo, {nome}!");
+
+                            // Aqui você pode abrir a tela principal do sistema
+                            this.Hide();
+                            Form1 frm = new Form1(); // exemplo
+                            frm.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuário ou senha inválidos!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro: " + ex.Message);
+                    }
+                }
+            }
         }
+    }
+}
     }
 }

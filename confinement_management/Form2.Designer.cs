@@ -118,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::confinement_management.Properties.Resources.Documento_A5_ficha_cadastral_de_clientes_simples__1_;
+            this.BackgroundImage = global::confinement_management.Properties.Resources.Documento_A5_ficha_cadastral_de_clientes_simples1;
             this.ClientSize = new System.Drawing.Size(1106, 710);
             this.Controls.Add(this.Cadastro);
             this.Controls.Add(this.DTPNASCIMENTO);
