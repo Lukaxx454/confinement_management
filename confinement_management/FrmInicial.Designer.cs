@@ -30,6 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.TsmUsuario = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsiCadastrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsiEditar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,10 +47,26 @@
             // 
             // TsmUsuario
             // 
+            this.TsmUsuario.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TsiCadastrar,
+            this.TsiEditar});
             this.TsmUsuario.Name = "TsmUsuario";
             this.TsmUsuario.Size = new System.Drawing.Size(59, 20);
             this.TsmUsuario.Text = "Usuário";
-            this.TsmUsuario.Click += new System.EventHandler(this.TsmUsuario_Click);
+            // 
+            // TsiCadastrar
+            // 
+            this.TsiCadastrar.Name = "TsiCadastrar";
+            this.TsiCadastrar.Size = new System.Drawing.Size(180, 22);
+            this.TsiCadastrar.Text = " Cadastrar";
+            this.TsiCadastrar.Click += new System.EventHandler(this.TsiCadastrar_Click);
+            // 
+            // TsiEditar
+            // 
+            this.TsiEditar.Name = "TsiEditar";
+            this.TsiEditar.Size = new System.Drawing.Size(180, 22);
+            this.TsiEditar.Text = "Editar/Listar";
+            this.TsiEditar.Click += new System.EventHandler(this.TsiEditar_Click);
             // 
             // FrmInicial
             // 
@@ -72,5 +90,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem TsmUsuario;
+        private System.Windows.Forms.ToolStripMenuItem TsiCadastrar;
+        private System.Windows.Forms.ToolStripMenuItem TsiEditar;
     }
 }

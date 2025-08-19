@@ -17,10 +17,16 @@ namespace confinement_management
             InitializeComponent();
         }
 
-        private void TsmUsuario_Click(object sender, EventArgs e)
+        private void TsiCadastrar_Click(object sender, EventArgs e)
         {
-            FrmUsuario CadastroU = new FrmUsuario();  
+            FrmUsuario CadastroU = new FrmUsuario();
             CadastroU.ShowDialog();
+        }
+
+        private void TsiEditar_Click(object sender, EventArgs e)
+        {
+            FrmEditUsuario frmEditUsuario = new FrmEditUsuario();  
+            frmEditUsuario.ShowDialog();
         }
     }
 }
