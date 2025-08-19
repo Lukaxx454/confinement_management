@@ -83,9 +83,39 @@ namespace confinement_management.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap confinement_management {
+            get {
+                object obj = ResourceManager.GetObject("confinement management", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Design_sem_nome {
             get {
                 object obj = ResourceManager.GetObject("Design sem nome", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Documento_A5_ficha_cadastral_de_clientes_simples {
+            get {
+                object obj = ResourceManager.GetObject("Documento A5 ficha cadastral de clientes simples", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Documento_A5_ficha_cadastral_de_clientes_simples__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Documento A5 ficha cadastral de clientes simples (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
