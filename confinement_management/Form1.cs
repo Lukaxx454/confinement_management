@@ -49,17 +49,6 @@ namespace confinement_management
         {
             string usuario = textBox1.Text;
             string senha = textBox2.Text;
-
-            namespace CadastroCliente
-    {
-        public partial class LoginForm : Form
-        {
-            public LoginForm()
-            {
-                InitializeComponent();
-            }
-
-            private void btnLogin_Click(object sender, EventArgs e)
             {
                 string connectionString = "Server=localhost;Database=SEU_BANCO;User Id=aluno;Password=aluno;";
 
@@ -74,8 +63,8 @@ namespace confinement_management
                                      WHERE email = @usuario AND senha = @senha";
 
                         SqlCommand cmd = new SqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("@usuario", usuario.Text);
-                        cmd.Parameters.AddWithValue("@senha", senha.Text);
+                        cmd.Parameters.AddWithValue("@usuario", usuario);
+                        cmd.Parameters.AddWithValue("@senha", senha);
 
                         SqlDataReader reader = cmd.ExecuteReader();
 
@@ -103,5 +92,4 @@ namespace confinement_management
         }
     }
 }
-    }
-}
+
