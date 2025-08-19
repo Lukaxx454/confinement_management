@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace confinement_management
 {
-    public partial class Form2 : Form
+    public partial class FrmUsuario : Form
     {
-        public Form2()
+        public FrmUsuario()
         {
             InitializeComponent();
         }
@@ -65,14 +65,7 @@ namespace confinement_management
                 }
             }
 
-            string mensagem = $"Cadastro realizado com sucesso!\n\n" +
-            $"Nome: {nome}\n" + $"CPF: {cpf}\n" + $"RG: {rg}\n" + $"Data de nascimento: {nascimento}\n" + $"E-mail: {email}\n" + $"Endereço: {ddd}\n" + $"Fazenda: {fazenda}\n" +
-            $"Cidade: {senha}\n" + $"Telefone: {tell}\n";
-
-            MessageBox.Show(mensagem);
-
-            Form1 fomr = new Form1();
-            fomr.ShowDialog();
+            this.Close();
 
 
         }

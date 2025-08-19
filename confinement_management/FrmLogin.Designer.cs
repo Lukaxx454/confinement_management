@@ -1,6 +1,6 @@
 ﻿namespace confinement_management
 {
-    partial class Form1
+    partial class FrmLogin
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxbEmail = new System.Windows.Forms.TextBox();
+            this.TxbSenha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,9 +45,9 @@
             this.label1.Font = new System.Drawing.Font("Noto Serif Hebrew", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(27, 247);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 27);
+            this.label1.Size = new System.Drawing.Size(71, 27);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Usuário";
+            this.label1.Text = "Email";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -61,21 +61,22 @@
             this.label2.Text = "Senha";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // TxbEmail
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(132, 247);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 26);
-            this.textBox1.TabIndex = 3;
+            this.TxbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxbEmail.Location = new System.Drawing.Point(132, 247);
+            this.TxbEmail.Name = "TxbEmail";
+            this.TxbEmail.Size = new System.Drawing.Size(182, 26);
+            this.TxbEmail.TabIndex = 3;
             // 
-            // textBox2
+            // TxbSenha
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(132, 297);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 26);
-            this.textBox2.TabIndex = 4;
+            this.TxbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxbSenha.Location = new System.Drawing.Point(132, 297);
+            this.TxbSenha.Name = "TxbSenha";
+            this.TxbSenha.PasswordChar = '*';
+            this.TxbSenha.Size = new System.Drawing.Size(182, 26);
+            this.TxbSenha.TabIndex = 4;
             // 
             // label3
             // 
@@ -134,7 +135,7 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Clique aqui!";
             // 
-            // Form1
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -145,11 +146,12 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxbSenha);
+            this.Controls.Add(this.TxbEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -160,8 +162,8 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxbEmail;
+        private System.Windows.Forms.TextBox TxbSenha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

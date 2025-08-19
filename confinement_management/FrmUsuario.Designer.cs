@@ -1,6 +1,6 @@
 ﻿namespace confinement_management
 {
-    partial class Form2
+    partial class FrmUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -114,7 +114,7 @@
             this.Cadastro.Text = "CADASTRAR";
             this.Cadastro.Click += new System.EventHandler(this.label1_Click);
             // 
-            // Form2
+            // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -130,7 +130,8 @@
             this.Controls.Add(this.TXBCPF);
             this.Controls.Add(this.TXBEMAIL);
             this.Controls.Add(this.TXBNOME);
-            this.Name = "Form2";
+            this.Name = "FrmUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);

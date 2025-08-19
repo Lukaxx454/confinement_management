@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace confinement_management
 {
-    public partial class Form1 : Form
+    public partial class FrmLogin : Form
     {
-        public Form1()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace confinement_management
 
         private void label5_Click(object sender, EventArgs e)
         {
-            Form2 fomr = new Form2();
+            FrmUsuario fomr = new FrmUsuario();
             fomr.ShowDialog();
 
         }
@@ -47,10 +47,11 @@ namespace confinement_management
 
         private void label3_Click(object sender, EventArgs e)
         {
-            string usuario = textBox1.Text;
-            string senha = textBox2.Text;
+            string email = TxbEmail.Text;
+            string senha = TxbSenha.Text;
             {
-                string connectionString = "Server=localhost;Database=SEU_BANCO;User Id=aluno;Password=aluno;";
+                string connectionString = "Server=sqlexpress;Database=CJ3027791PR2;User Id=aluno;Password=aluno;";
+
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
@@ -58,25 +59,24 @@ namespace confinement_management
                     {
                         conn.Open();
 
-                        string query = @"SELECT id_usuario, nome 
+                        string query = @"SELECT EMAIL, SENHA 
                                      FROM cadu
-                                     WHERE email = @usuario AND senha = @senha";
+                                     WHERE EMAIL = @email AND SENHA = @senha";
 
                         SqlCommand cmd = new SqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("@usuario", usuario);
+                        cmd.Parameters.AddWithValue("@email", email);
                         cmd.Parameters.AddWithValue("@senha", senha);
 
-                        SqlDataReader reader = cmd.ExecuteReader();
+                       SqlDataReader reader = cmd.ExecuteReader();
 
-                        if (reader.Read()) // encontrou usuário
+                        if (reader.HasRows) // encontrou usuário
                         {
-                            string nome = reader["nome"].ToString();
-                            MessageBox.Show($"Bem-vindo, {nome}!");
 
                             // Aqui você pode abrir a tela principal do sistema
-                            this.Hide();
-                            Form1 frm = new Form1(); // exemplo
-                            frm.Show();
+                            this.Visible = false;
+                            FrmInicial frm = new FrmInicial(); // exem
+                            frm.ShowDialog();
+                            this.Visible = true;
                         }
                         else
                         {
