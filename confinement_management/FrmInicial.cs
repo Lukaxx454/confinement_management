@@ -28,5 +28,10 @@ namespace confinement_management
             FrmEditUsuario frmEditUsuario = new FrmEditUsuario();  
             frmEditUsuario.ShowDialog();
         }
+
+        private void TsmUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace confinement_management
 {
-    public partial class FrmLogin : Form
+    public partial class FrmHome : Form
     {
-        public FrmLogin()
+        public FrmHome()
         {
             InitializeComponent();
         }

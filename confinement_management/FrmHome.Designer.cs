@@ -1,6 +1,6 @@
 ﻿namespace confinement_management
 {
-    partial class FrmLogin
+    partial class FrmHome
     {
         /// <summary>
         /// Variável de designer necessária.

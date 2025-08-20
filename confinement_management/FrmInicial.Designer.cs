@@ -53,6 +53,7 @@
             this.TsmUsuario.Name = "TsmUsuario";
             this.TsmUsuario.Size = new System.Drawing.Size(59, 20);
             this.TsmUsuario.Text = "Usuário";
+            this.TsmUsuario.Click += new System.EventHandler(this.TsmUsuario_Click);
             // 
             // TsiCadastrar
             // 
